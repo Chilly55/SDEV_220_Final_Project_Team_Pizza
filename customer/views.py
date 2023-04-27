@@ -77,11 +77,6 @@ class Order(View):
 
              f'Your total :{price}\n'
              'Our delivery guy will knock on your door soon!')
-
-             f'Your total:{price}\n'
-             'Our Delivery guy will Knock at your door soon!')
-
-
         send_mail(
             'Thanks for your order!',
             body,
