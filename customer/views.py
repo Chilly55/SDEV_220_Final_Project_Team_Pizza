@@ -74,13 +74,13 @@ class Order(View):
         order.items.add(*item_ids)
 #after user submits order send a confirmation email
         body = ('Thank you for your order, we will prepare your food\n'
-<<<<<<< HEAD
+
              f'Your total :{price}\n'
              'Our delivery guy will knock on your door soon!')
-=======
+
              f'Your total:{price}\n'
              'Our Delivery guy will Knock at your door soon!')
->>>>>>> 8165685b4d7c151dcea91a9310e83c7847f202a2
+
 
         send_mail(
             'Thanks for your order!',
