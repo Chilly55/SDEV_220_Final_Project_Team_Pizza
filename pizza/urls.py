@@ -15,14 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 from customer.views import Index, About, Order, OrderConformation, OrderPayConfirmation
+from django.contrib.auth import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Index.as_view(), name='index'),
     path('about/', About.as_view(), name='about'),
+    path('accounts/login/', views.LoginView.as_view(), name='login'),
+    path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
     path('order/', Order.as_view(), name='order'),
     path('order-confirmation/<int:pk>', OrderConformation.as_view(), name='order-confirmation'),
     path('payment-confirmation/', OrderPayConfirmation.as_view(),name='payment-submited'),

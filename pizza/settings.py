@@ -131,3 +131,7 @@ MEDIA_URL = '/media/'
 
 #Email confirmation
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+#login redirect
+LOGIN_REDIRECT_URL = '/' 
