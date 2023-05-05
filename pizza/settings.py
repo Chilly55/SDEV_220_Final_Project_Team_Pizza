@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'crispy_forms',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'register.apps.RegisterConfig'
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #login redirect
 LOGIN_REDIRECT_URL = '/' 
+
+
+#registration form
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
