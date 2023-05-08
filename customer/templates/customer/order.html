@@ -77,7 +77,11 @@
 
                 <div class="form-group pt-3">
                     <label for="name">Email Address</label>
+                    {% if user.is_authenticated %}
+                    <input required class="form-control" type="text" value="{{ user.email }}"/>
+                    {% else %}
                     <input required class="form-control" type="text" placeholder="example@ivytech.edu" name="email" />
+                    {% endif %}
                 </div>
 
 
