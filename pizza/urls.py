@@ -25,7 +25,7 @@ from register import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Index.as_view(), name='index'),
-    path ('register/', v.register, name= 'register'),
+    path('register/', v.register, name= 'register'),
     path('about/', About.as_view(), name='about'),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
